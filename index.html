@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Supplies Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <h1>Chemical Supplies Inventory</h1>
+
+  <div class="toolbar">
+    <button id="addRow"><i class="fas fa-plus"></i> Add Item</button>
+    <button id="moveUp"><i class="fas fa-arrow-up"></i> Move Up</button>
+    <button id="moveDown"><i class="fas fa-arrow-down"></i> Move Down</button>
+    <button id="deleteRow"><i class="fas fa-trash"></i> Remove Item</button>
+    <button id="refreshTable"><i class="fas fa-sync"></i> Refresh</button>
+    <button id="saveData"><i class="fas fa-save"></i> Save</button>
+  </div>
+
+  <table id="chemicalTable">
+    <thead>
+      <tr>
+        <th onclick="sortData(0)"></th>
+        <th onclick="sortData(1)"> ID</th>
+        <th onclick="sortData(2)"> Chemical Name</th>
+        <th onclick="sortData(3)"> Vendor</th>
+        <th onclick="sortData(4)"> Density (g/m³)</th>
+        <th onclick="sortData(5)"> Viscosity</th>
+        <th onclick="sortData(6)"> Packaging</th>
+        <th onclick="sortData(7)"> Pack Size</th>
+        <th onclick="sortData(8)"> Unit</th>
+        <th onclick="sortData(9)"> Quantity</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
